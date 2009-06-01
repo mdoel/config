@@ -50,3 +50,4 @@
 " remember last position in file
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
+let mapleader = ","
