@@ -1,35 +1,70 @@
 require 'rubygems'
-require 'wirble'
 
+# A couple of suggestions from Dr. Nic
+#require 'map_by_method'
+#require 'what_methods'
+
+# Adds colorization, PP, and ri support
+require 'wirble'
 Wirble.init
 Wirble.colorize
 
-alias q exit
-
-IRB.conf[:PROMPT_MODE] = :SIMPLE
-IRB.conf[:AUTO_INDENT] = true
-
-IRB.conf[:IRB_RC] = proc do |conf|
-  name = "irb: "
-  name = "rails: " if $0 == 'irb' && ENV['RAILS_ENV'] 
-  leader = " " * name.length
-  conf.prompt_i = "#{name}"
-  conf.prompt_s = leader + '\-" '
-  conf.prompt_c = leader + '\-+ '
-  conf.return_format = ('=' * (name.length - 2)) + "> %s\n"
-end
-
-class Object
-  def my_methods(include_inherited = false)
-    ignored_methods = include_inherited ? Object.methods : self.class.superclass.instance_methods
-    (self.methods - ignored_methods).sort
+# From the Pick Axe
+def show_regexp(a,re)
+  if a =~ re
+    "#{$`}<<#{$&}>>#{$'}"
+  else
+    "no match"
   end
 end
 
+class Regexp
+  def show_match(a)
+    show_regexp(a,self)
+  end
+end
 
-######### RAILS ONLY
+def surround(str)
+  ">>>>>>>>>>>" + str + "<<<<<<<<<<<"
+end
 
-if $0 == 'irb' && ENV['RAILS_ENV'] 
+
+# Save irb history between sessions
+require 'irb/ext/save-history'
+
+# Simple ri integration
+def ri(*names)
+  system("ri #{names.map {|name| name.to_s}.join(" ")}")
+end
+
+# From the Pick Axe - makes for pretty prompts
+IRB.conf[:IRB_RC] = lambda do |conf| 
+leader = " " * conf.irb_name.length 
+conf.prompt_i = "#{conf.irb_name} --> " 
+conf.prompt_s = leader + ' \-" ' 
+conf.prompt_c = leader + ' \-+ ' 
+conf.return_format = leader + " ==> %s\n\n" 
+conf.auto_indent_mode = true
+puts "Welcome!" 
+end 
+
+
+if ENV['RAILS_ENV']
+  load File.dirname(__FILE__) + '/.railsrc'
+end
+
+
+class Object
+  def local_methods
+    (methods - Object.instance_methods).sort
+  end
+end
+
+script_console_running = ENV.include?('RAILS_ENV') && IRB.conf[:LOAD_MODULES] && IRB.conf[:LOAD_MODULES].include?('console_with_helpers')
+rails_running = ENV.include?('RAILS_ENV') && !(IRB.conf[:LOAD_MODULES] && IRB.conf[:LOAD_MODULES].include?('console_with_helpers'))
+irb_standalone_running = !script_console_running && !rails_running
+
+if script_console_running
   require 'logger'
   Object.const_set(:RAILS_DEFAULT_LOGGER, Logger.new(STDOUT))
 end
