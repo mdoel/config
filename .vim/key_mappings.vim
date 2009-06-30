@@ -14,6 +14,10 @@
   nmap gh h
   nmap gl l
 
+" switch tabs
+  nmap gH :tabp<cr>
+  nmap gL :tabn<cr>
+
 " previous/next buffer (for going without tabs)
   nmap g[ :bp<cr>
   nmap g] :bn<cr>
