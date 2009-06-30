@@ -11,12 +11,12 @@
 " switch windows
   nmap gj j
   nmap gk k
-  nmap gh h
-  nmap gl l
+  nmap gH h
+  nmap gL l
 
 " switch tabs
-  nmap gH :tabp<cr>
-  nmap gL :tabn<cr>
+  nmap gh :tabp<cr>
+  nmap gl :tabn<cr>
 
 " previous/next buffer (for going without tabs)
   nmap g[ :bp<cr>
