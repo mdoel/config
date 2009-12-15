@@ -1,3 +1,4 @@
+filetype plugin indent on
 runtime general_config.vim
 runtime ui_config.vim
 runtime plugin_config.vim
