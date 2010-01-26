@@ -20,6 +20,7 @@ if [[ -f ~/.keys ]] ; then . ~/.keys ; fi
 # function for using Spotlight to find files with a specific name
 function loc { mdfind "kMDItemDisplayName == '$@'wc"; }
 
+
 ##
 # Your previous /Users/mdoel/.profile file was backed up as /Users/mdoel/.profile.macports-saved_2009-01-23_at_10:05:38
 ##
@@ -61,4 +62,15 @@ complete -o default -o nospace -F _capcomplete cap
 # MacPorts Installer addition on 2009-08-31_at_22:36:24: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
+
+function parse_git_branch {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "("${ref#refs/heads/}")"
+}
+BLACK="\[\033[0;30m\]"
+RED="\[\033[0;31m\]"
+GREEN="\[\033[0;32m\]"
+YELLOW="\[\033[0;33m\]"
+WHITE="\[\033[0;37m\]"
+PS1="$GREEN\w$YELLOW \$(parse_git_branch)$GREEN\$ $WHITE"
 
