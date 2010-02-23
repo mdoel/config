@@ -47,4 +47,5 @@
   nmap <Leader>b :FuzzyFinderBuffer<cr> 
   nmap <Leader>f :ruby finder.rescan!<cr>
   
-
+" Make Kevin happy"
+  nmap \ ,
