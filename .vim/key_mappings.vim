@@ -18,6 +18,13 @@
   nmap gh :tabp<cr>
   nmap gl :tabn<cr>
 
+" close all other windows (in the current tab)
+  nmap gW :only<cr>
+
+
+" close all other tabs
+  nmap gT :tabonly<cr>
+
 " previous/next buffer (for going without tabs)
   nmap g[ :bp<cr>
   nmap g] :bn<cr>
@@ -35,6 +42,10 @@
 
 " align pipe-separated tables for cucumber or textile with g| in visual mode
 	vmap g\| :Align \|<cr>
+
+" insert blank lines without going into insert mode
+  nmap go o<esc>
+  nmap gO O<esc>
 
 " scroll up/down one line at a time
   nmap <Up> 

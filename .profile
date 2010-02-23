@@ -1,6 +1,7 @@
 set -o emacs
 alias ls="ls -CF"
 alias ett='mate app config lib db public test spec features &'
+alias mvim='mvim 2>/dev/null'
 alias ss='./script/server'
 alias sc='./script/console'
 alias sg='./script/generate'
