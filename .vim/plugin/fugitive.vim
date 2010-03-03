@@ -1,0 +1,1 @@
+/Users/mdoel/src/vim-fugitive/plugin/fugitive.vim
