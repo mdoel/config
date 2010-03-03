@@ -11,12 +11,12 @@
 " switch windows
   nmap gj j
   nmap gk k
-  nmap gH h
-  nmap gL l
+  nmap gh h
+  nmap gl l
 
 " switch tabs
-  nmap gh :tabp<cr>
-  nmap gl :tabn<cr>
+  nmap gH :tabp<cr>
+  nmap gL :tabn<cr>
 
 " close all other windows (in the current tab)
   nmap gW :only<cr>
