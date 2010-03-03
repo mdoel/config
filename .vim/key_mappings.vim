@@ -53,7 +53,8 @@
 
 " Fuzzy Finder - go to launch; gb just for buffers; cmd-enter to open selected file in new tab
   let g:FuzzyFinderOptions = { 'Base':{} }
-  let g:FuzzyFinderOptions.Base.key_open_tab = '<D-CR>'
+  let g:FuzzyFinderOptions.Base.key_open_vsplit = '<D-CR>'
+  let g:FuzzyFinderOptions.Base.key_open_tab = '<S-CR>'
   nmap <Leader>t :FuzzyFinderTextMate<cr> 
   nmap <Leader>b :FuzzyFinderBuffer<cr> 
   nmap <Leader>f :ruby finder.rescan!<cr>
