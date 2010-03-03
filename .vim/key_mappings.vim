@@ -11,12 +11,12 @@
 " switch windows
   nmap gj j
   nmap gk k
-  nmap gH h
-  nmap gL l
+  nmap gh h
+  nmap gl l
 
 " switch tabs
-  nmap gh :tabp<cr>
-  nmap gl :tabn<cr>
+  nmap gH :tabp<cr>
+  nmap gL :tabn<cr>
 
 " close all other windows (in the current tab)
   nmap gW :only<cr>
@@ -53,7 +53,8 @@
 
 " Fuzzy Finder - go to launch; gb just for buffers; cmd-enter to open selected file in new tab
   let g:FuzzyFinderOptions = { 'Base':{} }
-  let g:FuzzyFinderOptions.Base.key_open_tab = '<D-CR>'
+  let g:FuzzyFinderOptions.Base.key_open_vsplit = '<D-CR>'
+  let g:FuzzyFinderOptions.Base.key_open_tab = '<S-CR>'
   nmap <Leader>t :FuzzyFinderTextMate<cr> 
   nmap <Leader>b :FuzzyFinderBuffer<cr> 
   nmap <Leader>f :ruby finder.rescan!<cr>
