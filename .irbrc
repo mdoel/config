@@ -9,6 +9,8 @@ require 'wirble'
 Wirble.init
 Wirble.colorize
 
+require 'string_to_editor'
+
 # From the Pick Axe
 def show_regexp(a,re)
   if a =~ re
