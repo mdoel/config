@@ -14,6 +14,7 @@ alias cucumber='cucumber -r features'
 alias cuke='cucumber'
 alias smoke="cucumber -p smoke"
 export PAGER=less
+export EDITOR=mvim
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/mysql/bin:/usr/local/git/bin
 export MANPATH=$MANPATH:/usr/local/man
 export FTP_PASSIVE=1
