@@ -8,6 +8,8 @@ require 'rubygems'
 require 'wirble'
 Wirble.init
 Wirble.colorize
+require 'ap'
+require 'pp'
 
 require 'string_to_editor'
 
