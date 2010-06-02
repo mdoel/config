@@ -13,6 +13,7 @@ alias dbc='script/dbconsole'
 alias cucumber='cucumber -r features'
 alias cuke='cucumber'
 alias smoke="cucumber -p smoke"
+alias rc="script/runner services/reset_cache.rb"
 export PAGER=less
 export EDITOR=mvim
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/mysql/bin:/usr/local/git/bin
