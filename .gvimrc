@@ -4,4 +4,4 @@
   set guifont=Inconsolata:h14
   set lines=80 columns=260
   set fuoptions=maxvert,background:Normal
-  colors vividchalk
+  colors ir_black
