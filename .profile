@@ -6,13 +6,15 @@ alias ss='./script/server'
 alias sc='./script/console'
 alias sg='./script/generate'
 alias cdt='cd $HOME/src/triptastic'
-alias prod='heroku console --app vacationtrade'
-alias staging='heroku console --app vacationtrade-staging'
+alias prod='heroku console --app rrbo'
+alias staging='heroku console --app staging-rrbo'
+alias mig='rake db:migrate db:test:prepare'
 alias gst='git status'
 alias dbc='script/dbconsole'
 alias cucumber='cucumber -r features'
 alias cuke='cucumber'
 alias smoke="cucumber -p smoke"
+alias rc="script/runner services/reset_cache.rb"
 export PAGER=less
 export EDITOR=mvim
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/mysql/bin:/usr/local/git/bin
@@ -78,3 +80,4 @@ YELLOW="\[\033[0;33m\]"
 WHITE="\[\033[0;37m\]"
 PS1="$GREEN\w$YELLOW \$(parse_git_branch)$GREEN\$ $WHITE"
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.

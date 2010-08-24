@@ -8,6 +8,10 @@ require 'rubygems'
 require 'wirble'
 Wirble.init
 Wirble.colorize
+
+require 'hirb'
+Hirb::View.enable
+
 require 'ap'
 require 'pp'
 
@@ -42,21 +46,41 @@ def ri(*names)
 end
 
 # From the Pick Axe - makes for pretty prompts
-IRB.conf[:IRB_RC] = lambda do |conf| 
-leader = " " * conf.irb_name.length 
-conf.prompt_i = "#{conf.irb_name} --> " 
-conf.prompt_s = leader + ' \-" ' 
-conf.prompt_c = leader + ' \-+ ' 
-conf.return_format = leader + " ==> %s\n\n" 
-conf.auto_indent_mode = true
-puts "Welcome!" 
-end 
+# IRB.conf[:IRB_RC] = lambda do |conf| 
+# leader = " " * conf.irb_name.length 
+# conf.prompt_i = "#{conf.irb_name} --> " 
+# conf.prompt_s = leader + ' \-" ' 
+# conf.prompt_c = leader + ' \-+ ' 
+# conf.return_format = leader + " ==> %s\n\n" 
+# conf.auto_indent_mode = true
+# puts "Welcome!" 
+# end 
+
+if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
+  #IRB.conf[:USE_READLINE] = true
+
+  # Display the RAILS ENV in the prompt
+  # ie : [Development]>> 
+  IRB.conf[:PROMPT][:CUSTOM] = {
+   :PROMPT_N => "[#{ENV["RAILS_ENV"].capitalize}]>> ",
+   :PROMPT_I => "[#{ENV["RAILS_ENV"].capitalize}]>> ",
+   :PROMPT_S => nil,
+   :PROMPT_C => "?> ",
+   :RETURN => "=> %s\n"
+   }
+  # Set default prompt
+  IRB.conf[:PROMPT_MODE] = :CUSTOM
+end
 
 
 if ENV['RAILS_ENV']
   load File.dirname(__FILE__) + '/.railsrc'
 end
 
+
+def me
+  User.find_by_email 'mike@mikedoel.com'
+end
 
 class Object
   def local_methods
