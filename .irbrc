@@ -14,6 +14,7 @@ Hirb::View.enable
 
 require 'ap'
 require 'pp'
+require 'looksee/shortcuts'
 
 require 'string_to_editor'
 
