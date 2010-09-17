@@ -59,4 +59,4 @@
   nmap <Leader>b :FuzzyFinderBuffer<cr> 
   nmap <Leader>f :ruby finder.rescan!<cr>
   
-
+  nmap <Leader>n :NERDTree<cr>
