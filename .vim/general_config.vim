@@ -1,5 +1,6 @@
 let mapleader = ","
 
+" Proper character type
   scriptencoding utf-8
 
 " Set temporary directory (don't litter local dir with swp/tmp files)
