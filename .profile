@@ -22,6 +22,10 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/mysql/bin:
 export MANPATH=$MANPATH:/usr/local/man
 export FTP_PASSIVE=1
 export RSPEC=true
+
+export REDWEEK_USER_ID=rwhittier2010@gmail.com
+export REDWEEK_PASSWORD=daaaaaaaaa
+
 if [[ -f ~/.keys ]] ; then . ~/.keys ; fi
 
 # function for using Spotlight to find files with a specific name
