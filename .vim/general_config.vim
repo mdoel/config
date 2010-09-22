@@ -1,3 +1,5 @@
+let mapleader = ","
+
   scriptencoding utf-8
 
 " Set temporary directory (don't litter local dir with swp/tmp files)
@@ -36,6 +38,9 @@
 
 " show the `best match so far' as search strings are typed:
   set incsearch
+  set showmatch
+  set hlsearch
+  nnoremap <leader><space> :noh<cr>
 
 " searching is case insensitive when all lowercase
   set ignorecase
@@ -44,10 +49,33 @@
 " assume the /g flag on :s substitutions to replace all matches in a line:
   set gdefault
 
+" use non-VIM regular expressions
+nnoremap / /\v
+vnoremap / /\v
+
 " make backspace work in insert mode
   set backspace=indent,eol,start
 
 " remember last position in file
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
-let mapleader = ","
+" show me where I am
+set ruler
+set cursorline
+" set cursorcolumn
+
+" work with faster tty's
+set ttyfast
+
+" always include at least 3 lines of context around current line
+set scrolloff=3
+
+" always have a status line
+set laststatus=2
+
+" show invisibles
+set list
+set listchars=tab:▸\ ,eol:¬
+
+" save when focus is lost
+au FocusLost * :wa

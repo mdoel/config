@@ -30,9 +30,9 @@
   nmap g] :bn<cr>
 
 " ack for project-wide searching
-  nmap g/ :LAck 
-  nmap g* :LAck <C-R><C-W> 
-  nmap ga :LAckAdd 
+  nmap g/ :LAck
+  nmap g* :LAck <C-R><C-W>
+  nmap ga :LAckAdd
   nmap gn :lnext<cr>
   nmap gp :lprev<cr>
 
@@ -41,7 +41,7 @@
   nmap gr :tabe config/routes.rb<cr>
 
 " align pipe-separated tables for cucumber or textile with g| in visual mode
-	vmap g\| :Align \|<cr>
+  vmap g\| :Align \|<cr>
 
 " insert blank lines without going into insert mode
   nmap go o<esc>
@@ -55,9 +55,29 @@
   let g:FuzzyFinderOptions = { 'Base':{} }
   let g:FuzzyFinderOptions.Base.key_open_vsplit = '<D-CR>'
   let g:FuzzyFinderOptions.Base.key_open_tab = '<S-CR>'
-  nmap <Leader>t :FuzzyFinderTextMate<cr> 
-  nmap <Leader>b :FuzzyFinderBuffer<cr> 
+  nmap <Leader>t :FuzzyFinderTextMate<cr>
+  nmap <Leader>b :FuzzyFinderBuffer<cr>
   nmap <Leader>f :ruby finder.rescan!<cr>
-  
-" Make Kevin happy"
-  nmap \ ,
+
+  nmap <Leader>n :NERDTree<cr>
+
+" use tab in normal/visual modes to bounce between parens/braces/brackets
+nnoremap <tab> %
+vnoremap <tab> %
+
+" get back to normal mode when accidentally hitting F1 instead of ESC
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+" strip all trailing whitespace from the current file
+nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
+
+" wrap paragrphs of text
+nnoremap <leader>q gqip
+
+" reselect pasted text so we can perform commands like indentation on it
+nnoremap <leader>v V`]
+
+" get out of insert mode more quickly
+inoremap jj <ESC>
