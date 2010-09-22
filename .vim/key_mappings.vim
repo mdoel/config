@@ -74,7 +74,8 @@ vnoremap <F1> <ESC>
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " wrap paragrphs of text
-nnoremap <leader>q gqip
+vmap Q gq
+nmap Q gqap
 
 " reselect pasted text so we can perform commands like indentation on it
 nnoremap <leader>v V`]
