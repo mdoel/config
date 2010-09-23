@@ -82,3 +82,6 @@ nnoremap <leader>v V`]
 
 " get out of insert mode more quickly
 inoremap jj <ESC>
+
+nmap <Leader>c :copen<CR>
+nmap <Leader>cc :cclose<CR>
