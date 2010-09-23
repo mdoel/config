@@ -85,3 +85,10 @@ inoremap jj <ESC>
 
 nmap <Leader>c :copen<CR>
 nmap <Leader>cc :cclose<CR>
+
+" reselect items after indending in visual mode
+vmap > >gv
+
+" allow tabs to indent in visual mode
+vmap <Tab> >
+vmap <S-Tab> <gv
