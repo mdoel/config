@@ -51,13 +51,13 @@
   nmap <Up> 
   nmap <Down> 
 
-" Fuzzy Finder - go to launch; gb just for buffers; cmd-enter to open selected file in new tab
-  let g:FuzzyFinderOptions = { 'Base':{} }
-  let g:FuzzyFinderOptions.Base.key_open_vsplit = '<D-CR>'
-  let g:FuzzyFinderOptions.Base.key_open_tab = '<S-CR>'
-  nmap <Leader>t :FuzzyFinderTextMate<cr>
-  nmap <Leader>b :FuzzyFinderBuffer<cr>
-  nmap <Leader>f :ruby finder.rescan!<cr>
+" Fuzzy Finder
+  let g:fuf_file_exclude = '\v\~$|\.(png|gif|jpg|o|exe|dll|bak|swp)$|(^|[/\\])\.(vendor|coverage|tmp|doc|hg|git|bzr)($|[/\\])|\/$'
+  let g:fuf_keyOpenTabpage = '<S-CR>'
+  let g:fuf_keyOpenVsplit = '<D-CR>'
+  nmap <Leader>t :FufFile<cr>
+  nmap <Leader>b :FufBuffer<cr>
+  nmap <Leader>f :FufRenewCache<cr>
 
   nmap <Leader>n :NERDTree<cr>
 
