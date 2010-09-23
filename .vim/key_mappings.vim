@@ -39,6 +39,9 @@
 " shortcuts for frequenly used files
   nmap gs :tabe db/schema.rb<cr>
   nmap gr :tabe config/routes.rb<cr>
+  nmap ge :tabe config/environment.rb<cr>
+  nmap gk :tabe ~/.vim/key_mappings.vim<cr>
+  nmap gv :tabe ~/.vim/general_config.vim<cr>
 
 " align pipe-separated tables for cucumber or textile with g| in visual mode
   vmap g\| :Align \|<cr>
@@ -92,3 +95,15 @@ vmap > >gv
 " allow tabs to indent in visual mode
 vmap <Tab> >
 vmap <S-Tab> <gv
+
+" Yank from the cursor to the end of the line, to be consistent with C and D.
+nnoremap Y y$
+
+" rails.vim mappings
+map <Leader>oc :Rcontroller<Space>
+map <Leader>ov :Rview<Space>
+map <Leader>om :Rmodel<Space>
+map <Leader>ou :Runittest<Space>
+map <Leader>oh :Rhelper<Space>
+map <Leader>oj :Rjavascript<Space>
+map <Leader>os :Rstylesheet<Space>
