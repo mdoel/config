@@ -40,8 +40,8 @@
   nmap gs :tabe db/schema.rb<cr>
   nmap gr :tabe config/routes.rb<cr>
   nmap ge :tabe config/environment.rb<cr>
-  nmap gk :tabe ~/.vim/key_mappings.vim<cr>
-  nmap gv :tabe ~/.vim/general_config.vim<cr>
+  nmap <leader>k :tabe ~/.vim/key_mappings.vim<cr>
+  nmap <leader>v :tabe ~/.vim/general_config.vim<cr>
 
 " align pipe-separated tables for cucumber or textile with g| in visual mode
   vmap g\| :Align \|<cr>
