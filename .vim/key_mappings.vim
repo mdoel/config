@@ -37,11 +37,11 @@
   nmap gp :lprev<cr>
 
 " shortcuts for frequenly used files
-  nmap gs :tabe db/schema.rb<cr>
-  nmap gr :tabe config/routes.rb<cr>
-  nmap ge :tabe config/environment.rb<cr>
-  nmap <leader>ek :tabe ~/.vim/key_mappings.vim<cr>
-  nmap <leader>ev :tabe ~/.vim/general_config.vim<cr>
+  nmap gs :e db/schema.rb<cr>
+  nmap gr :e config/routes.rb<cr>
+  nmap ge :e config/environment.rb<cr>
+  nmap <leader>ek :e ~/.vim/key_mappings.vim<cr>
+  nmap <leader>ev :e ~/.vim/general_config.vim<cr>
 
 " align pipe-separated tables for cucumber or textile with g| in visual mode
   vmap g\| :Align \|<cr>
@@ -58,9 +58,17 @@
   let g:fuf_file_exclude = '\v\~$|\.(png|gif|jpg|o|exe|dll|bak|swp)$|(^|[/\\])\.(vendor|coverage|tmp|doc|hg|git|bzr)($|[/\\])|\/$'
   let g:fuf_keyOpenTabpage = '<S-CR>'
   let g:fuf_keyOpenVsplit = '<D-CR>'
-  nmap <Leader>t :FufFile<cr>
+  nmap <Leader>tt :FufFile<cr>
   nmap <Leader>b :FufBuffer<cr>
-  nmap <Leader>f :FufRenewCache<cr>
+  " nmap <Leader>f :FufRenewCache<cr>
+
+" CommandT
+  let g:CommandTMatchWindowAtTop=1
+  let g:CommandTAcceptSelectionVSplitMap='<D-CR>' 
+  let g:CommandTAcceptSelectionTabMap='<S-CR>'
+  let g:CommandTMaxHeight=30
+  :set wildignore+=*.o,*.obj,.git,script/**,doc/**,vendor/**,coverage/**,tmp/**,*.gif,*.png,*.jpg
+  nmap <Leader>f :CommandTFlush<cr>
 
   nmap <Leader>n :NERDTree<cr>
 
