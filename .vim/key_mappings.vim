@@ -67,7 +67,8 @@
   let g:CommandTAcceptSelectionVSplitMap='<D-CR>' 
   let g:CommandTAcceptSelectionTabMap='<S-CR>'
   let g:CommandTMaxHeight=30
-  :set wildignore+=*.o,*.obj,.git,script/**,doc/**,vendor/**,coverage/**,tmp/**,*.gif,*.png,*.jpg
+  set wildignore+='*.o,*.obj,.git,script/**,doc/**,vendor/**,coverage/**,tmp/**,*.gif,*.png,*.jpg'
+  nmap <Leader>t :CommandT<cr>
   nmap <Leader>f :CommandTFlush<cr>
 
   nmap <Leader>n :NERDTree<cr>
