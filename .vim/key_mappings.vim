@@ -58,7 +58,7 @@
   let g:fuf_file_exclude = '\v\~$|\.(png|gif|jpg|o|exe|dll|bak|swp)$|(^|[/\\])\.(vendor|coverage|tmp|doc|hg|git|bzr)($|[/\\])|\/$'
   let g:fuf_keyOpenTabpage = '<S-CR>'
   let g:fuf_keyOpenVsplit = '<D-CR>'
-  nmap <Leader>tt :FufFile<cr>
+  " nmap <Leader>tt :FufFile<cr>
   nmap <Leader>b :FufBuffer<cr>
   " nmap <Leader>f :FufRenewCache<cr>
 
