@@ -245,6 +245,7 @@ map <Leader>oh :Rhelper<Space>
 map <Leader>oj :Rjavascript<Space>
 map <Leader>os :Rstylesheet<Space>
 
+nmap <Leader>on :on<cr>:AV<cr>gh
 
 
 " attempt to load a custom config for the currently logged in user
