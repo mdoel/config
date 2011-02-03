@@ -1,0 +1,4 @@
+AwesomePrint.defaults = {
+  :sorted_hash_keys => true
+}
+

@@ -18,6 +18,21 @@ require 'looksee/shortcuts'
 
 require 'string_to_editor'
 
+unless IRB.version.include?('DietRB')
+  IRB::Irb.class_eval do
+    def output_value
+      ap @context.last_value
+    end
+  end
+else # MacRuby
+  IRB.formatter = Class.new(IRB::Formatter) do
+    def inspect_object(object)
+      object.ai
+    end
+  end.new
+end
+
+
 # From the Pick Axe
 def show_regexp(a,re)
   if a =~ re
