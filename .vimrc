@@ -250,3 +250,7 @@ nmap <Leader>on :on<cr>:AV<cr>gh
 
 " attempt to load a custom config for the currently logged in user
 runtime! custom_config/`whoami`.vim
+
+" use the system clipboard as the default register
+:set clipboard+=unnamed
+
