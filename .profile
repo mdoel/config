@@ -23,6 +23,8 @@ alias rc="script/runner services/reset_cache.rb"
 alias gx="gitx --all"
 alias gst='git status'
 alias g='git'
+alias push='git push'
+alias pull='git pull'
 
 
 
