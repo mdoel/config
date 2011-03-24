@@ -13,13 +13,19 @@ alias cdb='cd $HOME/src/config/.vim/bundle'
 alias prod='heroku console --app rrbo'
 alias staging='heroku console --app staging-rrbo'
 alias mig='rake db:migrate db:test:prepare'
-alias gst='git status'
 alias dbc='script/dbconsole'
 alias cucumber='cucumber -r features'
 alias cuke='cucumber'
 alias smoke="cucumber -p smoke"
 alias rc="script/runner services/reset_cache.rb"
+
+# Git aliases
 alias gx="gitx --all"
+alias gst='git status'
+alias g='git'
+
+
+
 export PAGER=less
 export EDITOR=mvim
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/mysql/bin:/usr/local/git/bin

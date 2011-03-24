@@ -244,7 +244,6 @@ map <Leader>ou :Runittest<Space>
 map <Leader>oh :Rhelper<Space>
 map <Leader>oj :Rjavascript<Space>
 map <Leader>os :Rstylesheet<Space>
-
 nmap <Leader>on :on<cr>:AV<cr>gh
 
 

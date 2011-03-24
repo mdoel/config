@@ -1,10 +1,7 @@
-[user]
-	name = Adam McCrea
-	email = adam@adamlogic.com
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+  branch = auto
+  diff = auto
+  status = auto
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -18,20 +15,40 @@
   added = yellow
   changed = green
   untracked = cyan
-[merge]
-	tool = opendiff
+[branch]
+  autosetupmerge = true
+[color]
+  ui = true
 [core]
-	legacyheaders = false
-[repack]
-	usedeltabaseoffset = true
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  editor = mvim -f
 [alias]
-	ci = commit
-	co = checkout
-	st = status
-  ch = cherry -v origin
-  mine = log --author=Adam
-[github]
-	user = adamlogic
-	token = 35647376b5bad04b2c078f1e2164bcb6
-[diff "ruby"]
-	funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
+  s = status
+  r = reset
+  d = diff
+  a = add
+  ci = commit -a -m
+  cma = commit -a -m
+  cm = commit -m
+  ai = add --interactive
+  caa = commit -a --ammend -C HEAD
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  undo = reset --hard HEAD@{1}
+[user]
+  name = Mike Doel
+  email = mike@mikedoel.com
+[difftool "Kaleidoscope"]
+[difftool]
+[diff]
+[difftool "Kaleidoscope"]
+[diff]
+[difftool "Kaleidoscope"]
+[difftool]
+[diff]
+[difftool "Kaleidoscope"]
+[difftool]

@@ -14,9 +14,6 @@ Hirb::View.enable
 
 require 'ap'
 require 'pp'
-require 'looksee/shortcuts'
-
-require 'string_to_editor'
 
 unless IRB.version.include?('DietRB')
   IRB::Irb.class_eval do
