@@ -31,7 +31,7 @@
   cma = commit -a -m
   cm = commit -m
   ai = add --interactive
-  caa = commit -a --ammend -C HEAD
+  caa = commit -a --amend -C HEAD
   st = status
   ci = commit
   br = branch
