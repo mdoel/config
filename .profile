@@ -38,6 +38,10 @@ export RSPEC=true
 export REDWEEK_USER_ID=rwhittier2010@gmail.com
 export REDWEEK_PASSWORD=daaaaaaaaa
 
+export RGFTP_USER=mrn
+export RGFTP_PASSWORD=mrnBac0n
+export RGFTP_HOST=proxy.resortgems.com
+
 if [[ -f ~/.keys ]] ; then . ~/.keys ; fi
 
 # function for using Spotlight to find files with a specific name
