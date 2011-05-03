@@ -6,4 +6,4 @@
   set guifont=Menlo:h14
   set fuoptions=maxvert,background:Normal
   " colors ir_black
-  colors ir_black
+  colors darkrobot
