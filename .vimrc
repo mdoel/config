@@ -170,9 +170,9 @@ set autoread
   nmap gp :lprev<cr>
 
 " shortcuts for frequenly used files
-  nmap gs :e db/schema.rb<cr>
-  nmap gr :e config/routes.rb<cr>
-  nmap ge :e config/environment.rb<cr>
+  nmap gs :topleft :split db/schema.rb<cr>
+  nmap gr :topleft :split config/routes.rb<cr>
+  nmap ge :topleft :split config/environment.rb<cr>
 
 " align pipe-separated tables for cucumber or textile with g| in visual mode
   vmap g\| :Align \|<cr>
@@ -189,9 +189,8 @@ set autoread
   let g:fuf_file_exclude = '\v\~$|\.(png|gif|jpg|o|exe|dll|bak|swp)$|(^|[/\\])\.(vendor|coverage|tmp|doc|hg|git|bzr)($|[/\\])|\/$'
   let g:fuf_keyOpenTabpage = '<S-CR>'
   let g:fuf_keyOpenVsplit = '<D-CR>'
-  " nmap <Leader>tt :FufFile<cr>
-  nmap <Leader>b :FufBuffer<cr>
-  " nmap <Leader>f :FufRenewCache<cr>
+  nmap <Leader>b <c-^>
+  
 
 " CommandT
   let g:CommandTMatchWindowAtTop=1
@@ -200,9 +199,22 @@ set autoread
   let g:CommandTMaxHeight=30
   set wildignore+='*.o,*.obj,.git,script/**,doc/**,vendor/**,coverage/**,tmp/**,*.gif,*.png,*.jpg'
   nmap <Leader>t :CommandT<cr>
-  nmap <Leader>f :CommandTFlush<cr>
-
+  nmap <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+  map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+  map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+  map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
+  map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
+  map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+  map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
+  map <leader>gs :CommandTFlush<cr>\|:CommandT public/stylesheets<cr>
+  map <leader>gt :CommandTFlush<cr>\|:CommandT spec<cr>
+  map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
   nmap <Leader>n :NERDTree<cr>
+
+" Map ,e and ,v to open files in the same directory as the current file
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
 
 " use tab in normal/visual modes to bounce between parens/braces/brackets
 nnoremap <tab> %
