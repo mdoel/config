@@ -189,7 +189,8 @@ set autoread
   let g:fuf_file_exclude = '\v\~$|\.(png|gif|jpg|o|exe|dll|bak|swp)$|(^|[/\\])\.(vendor|coverage|tmp|doc|hg|git|bzr)($|[/\\])|\/$'
   let g:fuf_keyOpenTabpage = '<S-CR>'
   let g:fuf_keyOpenVsplit = '<D-CR>'
-  nmap <Leader>b <c-^>
+  " nmap <Leader>b <c-^>
+  nmap <Leader>b :FufBuffer<cr>
   
 
 " CommandT
@@ -201,6 +202,7 @@ set autoread
   nmap <Leader>t :CommandT<cr>
   nmap <leader>f :CommandTFlush<cr>\|:CommandT<cr>
   map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+  map <leader>gf :CommandTFlush<cr>\|:CommandT features<cr>
   map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
   map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
   map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
@@ -208,7 +210,6 @@ set autoread
   map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
   map <leader>gs :CommandTFlush<cr>\|:CommandT public/stylesheets<cr>
   map <leader>gt :CommandTFlush<cr>\|:CommandT spec<cr>
-  map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
   nmap <Leader>n :NERDTree<cr>
 
 " Map ,e and ,v to open files in the same directory as the current file
