@@ -266,3 +266,9 @@ runtime! custom_config/`whoami`.vim
 " use the system clipboard as the default register
 :set clipboard+=unnamed
 
+autocmd User fugitive
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
+
+autocmd BufReadPost fugitive://* set bufhidden=delete
