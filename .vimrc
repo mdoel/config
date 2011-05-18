@@ -210,6 +210,15 @@ set autoread
   map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
   map <leader>gs :CommandTFlush<cr>\|:CommandT public/stylesheets<cr>
   map <leader>gt :CommandTFlush<cr>\|:CommandT spec<cr>
+  map <leader>ov :CommandTFlush<cr>\|:CommandT app/views<cr>
+  map <leader>of :CommandTFlush<cr>\|:CommandT features<cr>
+  map <leader>oc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+  map <leader>om :CommandTFlush<cr>\|:CommandT app/models<cr>
+  map <leader>oh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
+  map <leader>ol :CommandTFlush<cr>\|:CommandT lib<cr>
+  map <leader>op :CommandTFlush<cr>\|:CommandT public<cr>
+  map <leader>os :CommandTFlush<cr>\|:CommandT public/stylesheets<cr>
+  map <leader>ot :CommandTFlush<cr>\|:CommandT spec<cr>
   nmap <Leader>n :NERDTree<cr>
 
 " Map ,e and ,v to open files in the same directory as the current file
@@ -250,14 +259,14 @@ vmap <S-Tab> <gv
 nnoremap Y y$
 
 " rails.vim mappings
-map <Leader>oc :Rcontroller<Space>
-map <Leader>ov :Rview<Space>
-map <Leader>om :Rmodel<Space>
-map <Leader>ou :Runittest<Space>
-map <Leader>oh :Rhelper<Space>
-map <Leader>oj :Rjavascript<Space>
-map <Leader>os :Rstylesheet<Space>
-nmap <Leader>on :on<cr>:AV<cr>gh
+" map <Leader>oc :Rcontroller<Space>
+" map <Leader>ov :Rview<Space>
+" map <Leader>om :Rmodel<Space>
+" map <Leader>ou :Runittest<Space>
+" map <Leader>oh :Rhelper<Space>
+" map <Leader>oj :Rjavascript<Space>
+" map <Leader>os :Rstylesheet<Space>
+" nmap <Leader>on :on<cr>:AV<cr>gh
 
 
 " attempt to load a custom config for the currently logged in user
