@@ -186,7 +186,7 @@ set autoread
   nmap <Down> 
 
 " Fuzzy Finder
-  let g:fuf_file_exclude = '\v\~$|\.(png|gif|jpg|o|exe|dll|bak|swp)$|(^|[/\\])\.(vendor|coverage|tmp|doc|hg|git|bzr)($|[/\\])|\/$'
+  let g:fuf_file_exclude = '\v\~$|\.(png|gif|jpg|o|exe|dll|bak|swp)$|(^|[/\\])\.(coverage|tmp|doc|hg|git|bzr)($|[/\\])|\/$'
   let g:fuf_keyOpenTabpage = '<S-CR>'
   let g:fuf_keyOpenVsplit = '<D-CR>'
   " nmap <Leader>b <c-^>
@@ -198,7 +198,7 @@ set autoread
   let g:CommandTAcceptSelectionVSplitMap='<D-CR>' 
   let g:CommandTAcceptSelectionTabMap='<S-CR>'
   let g:CommandTMaxHeight=30
-  set wildignore+='*.o,*.obj,.git,script/**,doc/**,vendor/**,coverage/**,tmp/**,*.gif,*.png,*.jpg'
+  set wildignore+='*.o,*.obj,.git,script/**,doc/**,coverage/**,tmp/**,*.gif,*.png,*.jpg'
   nmap <Leader>t :CommandT<cr>
   nmap <leader>f :CommandTFlush<cr>\|:CommandT<cr>
   map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
@@ -281,3 +281,6 @@ autocmd User fugitive
   \ endif
 
 autocmd BufReadPost fugitive://* set bufhidden=delete
+
+  nmap <C-n> :cnext<cr>
+  nmap <C-p> :cprev<cr>
