@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/Users/mdoel/.rvm/gems/ruby-1.9.2-p136@refinery/gems/refinerycms-calendar-1.0.4'
 let g:netrw_dirhist_2='/Users/mdoel/.rvm/gems/ruby-1.9.2-p136@refinery/gems/refinerycms-core-1.0.0'
 let g:netrw_dirhist_3='/Users/mdoel/.rvm/gems/ruby-1.9.2-p136@refinery/gems/refinerycms-pages-1.0.0'
 let g:netrw_dirhist_4='/Users/mdoel/.rvm/gems/ruby-1.9.2-p136@refinery/gems/refinerycms-search-0.9.8'
+let g:netrw_dirhist_5='/Users/mdoel/.rvm/gems/ruby-1.9.2-p136@refinery/gems/refinerycms-core-1.0.0'
