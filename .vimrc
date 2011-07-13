@@ -284,3 +284,10 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
   nmap <C-n> :cnext<cr>
   nmap <C-p> :cprev<cr>
+
+autocmd BufNewFile,BufRead *.markdown,*.md,*.mdown,*.mkd,*.mkdn
+      \ if &ft =~# '^\%(conf\|modula2\)$' |
+      \   set ft=markdown |
+      \ else |
+      \   setf markdown |
+      \ endif
