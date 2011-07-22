@@ -50,8 +50,10 @@ nmap <leader>sv :so $MYVIMRC<cr>
 " show the `best match so far' as search strings are typed:
   set incsearch
   set showmatch
-  set hlsearch
-  nnoremap <leader><space> :noh<cr>
+  " set hlsearch
+  " nnoremap <leader><space> :noh<cr>
+  :noremap <F4> :set hlsearch! hlsearch?<CR>
+  :noremap <leader><space> :set hlsearch! hlsearch?<CR>
 
 " searching is case insensitive when all lowercase
   set ignorecase
