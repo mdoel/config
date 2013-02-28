@@ -1,6 +1,5 @@
 set -o emacs
 alias ls="ls -CF"
-alias mvim='mvim 2>/dev/null'
 alias ss='./script/server'
 alias sc='./script/console'
 alias sg='./script/generate'
@@ -16,6 +15,12 @@ alias dbc='script/dbconsole'
 alias cucumber='cucumber -r features'
 alias cuke='cucumber'
 alias smoke="cucumber -p smoke"
+alias dos2unix='dos2unix -c mac'
+alias mvim='mvim 2>/dev/null'
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim 2>/dev/null'
+# alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim 2>/dev/null'
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+
 
 # Git aliases
 alias gx="gitx --all"
@@ -31,10 +36,16 @@ export MANPATH=$MANPATH:/usr/local/man
 export FTP_PASSIVE=1
 export RSPEC=true
 
+# trying to fix some bundle install weirdness.  Prior to this, by value was en_US.US-ASCII
+export LANG='en_US.UTF-8'
+
 if [[ -f ~/.keys ]] ; then . ~/.keys ; fi
 
 # function for using Spotlight to find files with a specific name
 function loc { mdfind "kMDItemDisplayName == '$@'wc"; }
+function back {
+  ack "$@" `bundle show --paths`
+}
 
 
 export PATH=$PATH:/usr/local/pgsql/bin
@@ -67,4 +78,9 @@ YELLOW="\[\033[0;33m\]"
 WHITE="\[\033[0;37m\]"
 PS1="$GREEN\w$YELLOW \$(parse_git_branch)$GREEN\$ $WHITE"
 
+# export CC=gcc-4.2
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

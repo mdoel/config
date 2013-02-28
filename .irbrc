@@ -5,29 +5,29 @@ require 'rubygems'
 #require 'what_methods'
 
 # Adds colorization, PP, and ri support
-require 'wirble'
-Wirble.init
-Wirble.colorize
-
-require 'hirb'
-Hirb::View.enable
-
-require 'ap'
-require 'pp'
-
-unless IRB.version.include?('DietRB')
-  IRB::Irb.class_eval do
-    def output_value
-      ap @context.last_value
-    end
-  end
-else # MacRuby
-  IRB.formatter = Class.new(IRB::Formatter) do
-    def inspect_object(object)
-      object.ai
-    end
-  end.new
-end
+# require 'wirble'
+# Wirble.init
+# Wirble.colorize
+# 
+# require 'hirb'
+# Hirb::View.enable
+# 
+# require 'ap'
+# require 'pp'
+# 
+# unless IRB.version.include?('DietRB')
+#   IRB::Irb.class_eval do
+#     def output_value
+#       ap @context.last_value
+#     end
+#   end
+# else # MacRuby
+#   IRB.formatter = Class.new(IRB::Formatter) do
+#     def inspect_object(object)
+#       object.ai
+#     end
+#   end.new
+# end
 
 
 # From the Pick Axe

@@ -73,8 +73,8 @@ vnoremap / /\v
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
 " show me where I am
-set ruler
-set cursorline
+" set ruler
+" set cursorline
 " set cursorcolumn
 
 " work with faster tty's
@@ -122,7 +122,7 @@ set autoread
 
 " enable line numbers
   set number
-  setlocal numberwidth=3
+  setlocal numberwidth=4
 
 " These two enable syntax highlighting
   set nocompatible
@@ -293,3 +293,21 @@ autocmd BufNewFile,BufRead *.markdown,*.md,*.mdown,*.mkd,*.mkdn
       \ else |
       \   setf markdown |
       \ endif
+
+:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+
+
+
+" make it pretty
+  " set guioptions=e
+  " set guioptions-=m
+  " set lines=80 columns=200
+  " set guifont=Inconsolata:h18
+  " set guifont=Anonymous\ Pro:h14
+  " set guifont=Monaco:h14
+  " set guifont=Menlo:h14
+  " set fuoptions=maxvert,background:Normal
+  " colors ir_black
+  " colors candycode
+  " colors vc
+  colorscheme twilight2
