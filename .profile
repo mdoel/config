@@ -36,6 +36,9 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/mysql/bin
 export MANPATH=$MANPATH:/usr/local/man
 export FTP_PASSIVE=1
 export RSPEC=true
+export GOOGLE_CLIENT_ID="480140443980.apps.googleusercontent.com"
+export GOOGLE_SECRET="v03dRPvKlgn_OsK79MXSDn5j"
+
 
 # trying to fix some bundle install weirdness.  Prior to this, by value was en_US.US-ASCII
 export LANG='en_US.UTF-8'
