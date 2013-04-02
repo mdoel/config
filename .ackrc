@@ -1,19 +1,26 @@
---type-add=ruby=.haml,.rake,.rsel,.builder
---type-add=html=.html.erb,.html.haml
---type-add=js=.js.erb
---type-add=css=.sass
---type-add=css=.scss
+--type-add=ruby=.haml,.rake,.rsel,.builder,.slim
+--type-add=html=.html.erb,.haml,.slim
+--type-add=js=.js.erb,.json
+--type-add=css=.sass,.less,.scss
 --type-set=cucumber=.feature
+--type-set=coffeescript=.coffee
+--type-set=markdown=.markdown,.mdown,.md,.mkd,.mkdn,.txt
+--type-set=handlebars=.handlebars,.hbs
 
+--ignore-dir=coverage
+--ignore-dir=doc
 --ignore-dir=log
 --ignore-dir=tmp
---ignore-dir=doc
---ignore-dir=coverage
---ignore-dir=fixtures
---ignore-dir=system
---ignore-dir=scrip
+--ignore-dir=vendor
+--ignore-dir=uploads
+--ignore-dir=images
+--ignore-dir=build
+--ignore-dir=generated
+--ignore-dir=asset-cache
+--ignore-dir=node_modules
 
---sort-files
 --color
 --follow
 --group
+--sort-files
+
