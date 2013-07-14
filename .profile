@@ -34,7 +34,7 @@ alias pull='git pull'
 
 export PAGER=less
 export EDITOR=mvim
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/mysql/bin
+export PATH=./bin:/usr/local/heroku/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/local/pgsql/bin
 export MANPATH=$MANPATH:/usr/local/man
 export FTP_PASSIVE=1
 export RSPEC=true
@@ -54,7 +54,6 @@ function back {
 }
 
 
-export PATH=$PATH:/usr/local/pgsql/bin
 export PGOPTIONS='-c client_min_messages=WARNING'
 
 #rake tab completion
@@ -87,6 +86,3 @@ PS1="$GREEN\w$YELLOW \$(parse_git_branch)$GREEN\$ $WHITE"
 # export CC=gcc-4.2
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
