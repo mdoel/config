@@ -1,26 +1,14 @@
 set -o emacs
 alias ls="ls -CF"
-alias ss='./script/server'
-alias sc='./script/console'
-alias sg='./script/generate'
 alias cdt='cd $HOME/src/threadsuite/api'
+alias cdo='cd $HOME/src/threadsuite/ilinesheet-web'
 alias cdm='cd $HOME/src/messiahumc'
 alias cd2='cd $HOME/src/T2'
-alias sshp='ssh mdoel@proxy.resortgems.com'
+alias cda='cd $HOME/src/t2-api'
 alias cdc='cd $HOME/src/config'
-alias cdv='cd $HOME/src/vidio'
-alias r="script/rails"
-alias prod='heroku console --app rrbo'
-alias staging='heroku console --app staging-rrbo'
-alias mig='rake db:migrate db:test:prepare'
-alias dbc='script/dbconsole'
-alias cucumber='cucumber -r features'
-alias cuke='cucumber'
-alias smoke="cucumber -p smoke"
 alias dos2unix='dos2unix -c mac'
 alias mvim='mvim 2>/dev/null'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim 2>/dev/null'
-# alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim 2>/dev/null'
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 alias t2db='cp config/database.sample.yml config/database.yml'
 
