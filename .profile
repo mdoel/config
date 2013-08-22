@@ -12,6 +12,7 @@ alias mvim='mvim 2>/dev/null'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim 2>/dev/null'
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 alias t2db='cp config/database.sample.yml config/database.yml'
+alias prod='heroku run console -r production'
 
 
 # Git aliases
