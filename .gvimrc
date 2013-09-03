@@ -1,7 +1,7 @@
 " make it pretty
   set guioptions=e
   set guioptions-=m
-  set lines=80 columns=200
+  set lines=81 columns=193
   " set guifont=Inconsolata:h18
   " set guifont=Anonymous\ Pro:h14
   set guifont=Monaco:h14
