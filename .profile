@@ -14,6 +14,7 @@ alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/
 alias t2db='cp config/database.sample.yml config/database.yml'
 alias prod='heroku run console -r production'
 alias staging="heroku run console -r staging"
+alias rc="rails console"
 
 
 # Git aliases
