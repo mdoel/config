@@ -26,7 +26,8 @@ alias pull='git pull'
 
 export PAGER=less
 export EDITOR=mvim
-export PATH=./bin:/usr/local/heroku/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/local/pgsql/bin
+export PATH=./bin:/usr/local/heroku/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/mysql/bin:/usr/local/share/npm/bin
+export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 export MANPATH=$MANPATH:/usr/local/man
 export FTP_PASSIVE=1
 export RSPEC=true
