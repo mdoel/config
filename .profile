@@ -1,12 +1,5 @@
 set -o emacs
 alias ls="ls -CF"
-alias cdt='cd $HOME/src/threadsuite/api'
-alias cdo='cd $HOME/src/threadsuite/ilinesheet-web'
-alias cdm='cd $HOME/src/messiahumc'
-alias cd2='cd $HOME/src/T2'
-alias cda='cd $HOME/src/t2-api'
-alias cdu='cd $HOME/src/t2-utilization'
-alias cdc='cd $HOME/src/config'
 alias dos2unix='dos2unix -c mac'
 alias mvim='mvim 2>/dev/null'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim 2>/dev/null'
@@ -33,6 +26,8 @@ export FTP_PASSIVE=1
 export RSPEC=true
 export GOOGLE_CLIENT_ID="480140443980.apps.googleusercontent.com"
 export GOOGLE_SECRET="v03dRPvKlgn_OsK79MXSDn5j"
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 
 
 # trying to fix some bundle install weirdness.  Prior to this, by value was en_US.US-ASCII
