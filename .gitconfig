@@ -22,6 +22,7 @@
 [core]
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
   editor = mvim -f
+	excludesfile = /Users/mdoel/.gitignore_global
 [alias]
   s = status
   r = reset
@@ -40,8 +41,9 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   undo = reset --hard HEAD@{1}
 [user]
-  name = Mike Doel
-  email = mike@mikedoel.com
+	name = Mike Doel
+	email = mike@mikedoel.com
+	username = mdoel
 [difftool "Kaleidoscope"]
 [difftool]
 [diff]
@@ -52,3 +54,19 @@
 [diff]
 [difftool "Kaleidoscope"]
 [difftool]
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
