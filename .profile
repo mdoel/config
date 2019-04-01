@@ -19,7 +19,7 @@ export PAGER=less
 export EDITOR=mvim
 
 MYSQL=/usr/local/mysql/bin
-export PATH=./bin:$HOME/bin:/usr/local/bin:/usr/local/sbin
+export PATH=./bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export MANPATH=$MANPATH:/usr/local/man
 export FTP_PASSIVE=1
 export RSPEC=true
