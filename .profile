@@ -57,3 +57,5 @@ GREEN="\[\033[0;32m\]"
 YELLOW="\[\033[0;33m\]"
 WHITE="\[\033[0;37m\]"
 PS1="$GREEN\w$YELLOW \$(parse_git_branch)$GREEN\$ $WHITE"
+
+eval "$(rbenv init -)"
