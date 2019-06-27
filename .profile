@@ -37,6 +37,8 @@ function back {
 
 export PGOPTIONS='-c client_min_messages=WARNING'
 
+source $HOME/.private_vars
+
 #rake tab completion
 export COMP_WORDBREAKS=${COMP_WORDBREAKS/\:/}
 
