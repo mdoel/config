@@ -44,16 +44,6 @@
 	name = Mike Doel
 	email = mike@mikedoel.com
 	username = mdoel
-[difftool "Kaleidoscope"]
-[difftool]
-[diff]
-[difftool "Kaleidoscope"]
-[diff]
-[difftool "Kaleidoscope"]
-[difftool]
-[diff]
-[difftool "Kaleidoscope"]
-[difftool]
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f

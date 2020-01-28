@@ -1,12 +1,8 @@
 set -o emacs
 alias ls="ls -CF"
 alias dos2unix='dos2unix -c mac'
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
-alias prod='heroku run console -r production'
-alias staging="heroku run console -r staging"
 alias rc="rails console"
-
 
 # Git aliases
 alias gx="gitx --all"
@@ -24,7 +20,6 @@ export MANPATH=$MANPATH:/usr/local/man
 export FTP_PASSIVE=1
 export RSPEC=true
 
-
 # trying to fix some bundle install weirdness.  Prior to this, by value was en_US.US-ASCII
 export LANG='en_US.UTF-8'
 
@@ -33,21 +28,6 @@ function loc { mdfind "kMDItemDisplayName == '$@'wc"; }
 function back {
   ack "$@" `bundle show --paths`
 }
-
-
-export PGOPTIONS='-c client_min_messages=WARNING'
-
-source $HOME/.private_vars
-
-#rake tab completion
-export COMP_WORDBREAKS=${COMP_WORDBREAKS/\:/}
-
-_rakecomplete() {
-  COMPREPLY=($(compgen -W "`rake -s -T 2>/dev/null | awk '{{print $2}}'`" -- ${COMP_WORDS[COMP_CWORD]}))
-  return 0
-}
-
-complete -o default -o nospace -F _rakecomplete rake
 
 function parse_git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
